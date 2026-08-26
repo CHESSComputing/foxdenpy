@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "foxden"
+version = "0.1.0"
+description = "Python client for the FOXDEN data ecosystem (metadata + S3 storage access via DIDs)"
+readme = "README.md"
+requires-python = ">=3.8"
+authors = [{ name = "Valentin Kuznetsov", email = "vkuznet@gmail.com" }]
+dependencies = [
+    "requests>=2.25",
+]
+
+[project.optional-dependencies]
+yaml = ["pyyaml>=5.1"]
+
+[tool.setuptools.packages.find]
+include = ["foxden*"]
